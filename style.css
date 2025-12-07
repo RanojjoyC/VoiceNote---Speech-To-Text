@@ -1,0 +1,308 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-bg : white;
+    --secondary-bg: ;
+
+    --text-primary: #023e8a;
+    --text-secondry: #00b4d8;
+}
+
+body{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight: 400px;
+    font-style: normal;
+    min-height: 100vh;
+    line-height: 1.6;
+    background-color: var(--primary-bg);
+}
+
+/* Brand Logo and Name */
+.header-brand{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    position: sticky;
+    z-index: 600;
+    background-color: var(--primary-bg);
+    margin: 15px;
+}
+
+.brand-logo{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    height: 80px;
+    width: 100px;
+    font-size: 37px;
+    padding: 10px;
+    color: var(--text-primary);
+}
+
+.brand-name{
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--text-primary);
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    gap: 20px;
+    min-height: 80vh;
+}
+
+.left-content{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.title{
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    line-height: 1.1;
+    margin: 0%;
+}
+
+.des{
+    font-size: 1.2rem;
+    color: var(--text-secondry);
+    line-height: 1.6;
+}
+
+.character-image img{
+    width: 550px;
+    height: 600px;
+    margin: 60px;
+
+    /* Taken GPT help here */
+    -webkit-mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+    mask-image: radial-gradient(circle at center, black 65%, transparent 100%);
+}
+
+.toolbox-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.controls{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8rem;
+    justify-content: space-between;
+}
+
+.controls :hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+
+.startBtn {
+    height: 55px;
+    width: 200px;
+    font-weight: 800;
+    font-size: 20px;
+    background: #70e000;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap: 7px;
+    color: whitesmoke;
+}
+
+
+.stopBtn {
+    height: 55px;
+    width: 200px;
+    font-weight: 800;
+    font-size: 20px;
+    background: red;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap: 7px;
+    color: antiquewhite;
+}
+
+
+.saveNote {
+    height: 55px;
+    width: 200px;
+    font-weight: 800;
+    font-size: 20px;
+    background: var(--text-secondry);
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap: 7px;
+    color: whitesmoke;
+}
+
+
+.text-box-section {
+    display: flex;
+    justify-content: center; 
+    margin-top: 3rem;        
+    margin-bottom: 3rem;
+    width: 100%;
+}
+
+.text-area {
+    width: 90%;              
+    max-width: 800px;
+    height: 300px;
+    
+    padding: 2rem;           
+    border-radius: 20px;
+    border: 2px solid #e0e0e0;
+    
+    font-family: inherit;    
+    font-size: 1.2rem; 
+    line-height: 1.6;
+    
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05); 
+    resize: vertical;
+    transition: all 0.3s ease;
+}
+
+.text-area:focus {
+    outline: none;
+    border-color: var(--text-secondry);
+    box-shadow: 0 10px 30px rgba(9, 132, 227, 0.15); /* Blue glow */
+}
+
+
+.notes-section {
+    margin-top: 30px;
+    padding-top: 30px;
+    border-top: 2px solid #e5e7eb;
+}
+
+.savedNotes{
+    color: var(--text-primary);
+    font-size: 35px;
+    font-weight: 650;
+    margin-left: 30px;
+}
+
+.notes-list{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    color: var(--text-secondry);
+    font-size: 20px;
+    margin-left: 30px;
+    font: 400;
+    line-height: 1.6;
+}
+
+
+.saved-note-item:hover{
+    transform: translateX(5px);
+}
+
+.saved-note-item p{
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* for editable */
+.saved-note-item {
+    position: relative;
+    background-color: #f8f9fa;
+    border-left: 5px solid #00b4d8;
+    padding: 15px;
+    padding-bottom: 45px; 
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition: transform 0.2s;
+    margin-bottom: 15px;
+}
+
+.note-content {
+    font-size: 1.1rem;
+    color: #333;
+    width: 100%;
+    outline: none; 
+    padding: 5px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* when editable */
+.note-content[contenteditable="true"] {
+    background-color: white;
+    border: 2px dashed #00b4d8;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1);
+}
+
+.note-footer {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.note-time {
+    font-size: 0.8rem;
+    color: #888;
+    font-family: 'Inter', sans-serif;
+}
+
+.note-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.action-btn {
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+    color: white;
+}
+
+.edit-btn {
+    background-color: #ffc300; 
+}
+
+.edit-btn:hover {
+    background-color: #ffc300;
+}
+
+.delete-btn {
+    background-color: red;
+}
+
+.delete-btn:hover {
+    background-color: red;
+}

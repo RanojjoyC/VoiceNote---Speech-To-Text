@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VoiceNote</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Rubik+Distressed&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    
+    <div class="header-brand">
+        <!-- Will write brand name and logo -->
+        <div class="brand-logo">
+            <i class="fa-solid fa-microphone-lines"></i>
+            <span class="brand-name">VoiceNote</span>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="left-content">
+        <h1 class="title">
+            Speech to Text Generator
+        </h1>
+        
+        <p class="des">
+            Why write long notes when you can just say it out loud?
+            <br>
+            Click the button and start speaking. 
+            <br>
+            Watch your words as they appear in real-time. 
+            <br>
+            Save your notes once done.
+        </p>
+        
+        </div>
+
+        <div class="right-content">
+            <!-- Will input character image and mic image -->
+            <div class="character-image">
+                <img src="lmao.jpg" alt="Image">
+            </div>
+        </div>
+    </div>
+
+    <div class="toolbox-section">
+        
+        <div class="controls">
+            <!-- Start Button -->
+            <div class="startBtn"><i class="fa-solid fa-record-vinyl"></i>Start Listening</div>
+        
+            <!-- Stop Button -->
+             <div class="stopBtn"><i class="fa-solid fa-pause"></i>Stop Listening</div>
+
+            <!-- Note Save -->
+             <div class="saveNote"><i class="fa-solid fa-floppy-disk"></i>Save Note</div>
+        </div>
+    </div>
+
+    <div class="text-box-section">
+        <textarea 
+            class="text-area" 
+            placeholder="Your speech will appear here...">
+        </textarea>
+    </div>
+
+    <div class="notes-section">
+        <div class="savedNotes">📝 Saved Notes</div>
+        <div class="notes-list" id="notesList">
+            <div class="empty-state">No saved notes yet. Start speaking and save your first note!</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
